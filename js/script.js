@@ -14,3 +14,35 @@ loginBtn.addEventListener('click', function () {
     }
 
 });
+
+
+
+// add dollar & deposit
+const depositBtn = document.getElementById('addDeposit');
+depositBtn.addEventListener('click', function () {
+    let depositInput = document.getElementById('depositInput').value;
+    if (depositInput > 0 && depositInput != ' ') {
+        depositInput = depositInput;
+    }
+    else {
+        depositInput = 0;
+    };
+    const depositNumber = parseFloat(depositInput);
+
+
+
+    const currentDeposit = document.getElementById('currentDeposit').innerText;
+    const currentDepositNum = parseFloat(currentDeposit);
+
+    const result = depositNumber + currentDepositNum;
+    document.getElementById('currentDeposit').innerText = result;
+
+
+
+    // updateSpan('currentBalance', depositNumber);
+    const currentBalance = document.getElementById('currentBalance').innerText;
+    const currentBalanceNum = parseFloat(currentBalance);
+    const totalBalance = depositNumber + currentBalanceNum;
+    document.getElementById('currentBalance').innerText = totalBalance;
+    document.getElementById('depositInput').value = '';
+});
