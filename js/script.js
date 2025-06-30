@@ -75,3 +75,11 @@ withdrawBtn.addEventListener('click', function () {
     document.getElementById('currentBalance').innerText = currentTotalBalance;
 
 });
+
+function span1(id, depositNumber) {
+    const current = document.getElementById(id).innerText;
+    const currentDeposit = parseFloat(current);
+
+    const total = depositNumber + currentDeposit;
+    document.getElementById(id).innerText = total;
+}
