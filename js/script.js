@@ -46,3 +46,19 @@ depositBtn.addEventListener('click', function () {
     document.getElementById('currentBalance').innerText = totalBalance;
     document.getElementById('depositInput').value = '';
 });
+
+
+
+// withdraw button event handler;
+const withdrawBtn = document.getElementById('addWithdraw');
+withdrawBtn.addEventListener('click', function () {
+
+    let withdrawInput = document.getElementById('withdrawInput').value;
+    if (withdrawInput > 0 && withdrawInput != ' ') {
+        withdrawInput = withdrawInput;
+    }
+    else {
+        withdrawInput = 0;
+    };
+
+});
