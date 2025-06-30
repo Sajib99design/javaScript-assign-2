@@ -61,4 +61,17 @@ withdrawBtn.addEventListener('click', function () {
         withdrawInput = 0;
     };
 
+
+    let withdrawInput2 = parseFloat(withdrawInput);
+    let currentWithdrow = document.getElementById('currentWithdrow').innerText;
+    let currentWithdrow2 = parseFloat(currentWithdrow);
+    let totalWithdraw = currentWithdrow2 + withdrawInput2;
+    document.getElementById('currentWithdrow').innerText = totalWithdraw;
+    document.getElementById('withdrawInput').value = '';
+
+    const currentBalance = document.getElementById('currentBalance').innerText;
+    const currentBalanceNum = parseFloat(currentBalance);
+    let currentTotalBalance = currentBalanceNum - withdrawInput2;
+    document.getElementById('currentBalance').innerText = currentTotalBalance;
+
 });
