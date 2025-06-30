@@ -1,5 +1,11 @@
 body {
     padding: 100px;
+    background: darkcyan;
+}
+
+h2,
+h4 {
+    color: #fff;
 }
 
 /* submit area  */
